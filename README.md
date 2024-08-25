@@ -21,8 +21,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Image(systemName: "star.fill")
-                .resizable
-                .scaledToFit
+                .resizable()
+                .scaledToFit()
                 .aquaFrameModifier(
                     aquaColor: .blue,
                     aquaOpacity: 0.35,
