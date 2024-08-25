@@ -17,28 +17,25 @@ The `AquaFrameModifier` adds a stylish Aqua-themed frame effect to your SwiftUI 
 import SwiftUI
 
 struct ContentView: View {
-    @State private var aquaColor = Color.blue
-    @State private var aquaOpacity: CGFloat = 0.35
-    @State private var cornerRadius: CGFloat = 12.0
-    @State private var colorShadow: Bool = true
 
     var body: some View {
         VStack {
             Image(systemName: "star.fill")
+                .resizable
+                .scaledToFit
                 .aquaFrameModifier(
-                    aquaColor: aquaColor,
-                    aquaOpacity: aquaOpacity,
-                    cornerRadius: cornerRadius,
-                    colorShadow: colorShadow
+                    aquaColor: .blue,
+                    aquaOpacity: 0.35,
+                    cornerRadius: 20
                 )
             
             Text("Aqua Styled Text")
                 .padding()
                 .aquaFrameModifier(
-                    aquaColor: aquaColor,
+                    aquaColor: .blue,
                     aquaOpacity: 0.6,
-                    cornerRadius: cornerRadius,
-                    colorShadow: colorShadow
+                    cornerRadius: 20,
+                    colorShadow: false
                 )
         }
         .padding()
